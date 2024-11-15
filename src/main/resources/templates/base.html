@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" th:fragment="parent(content, title, script)" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-th-replace="${title}">Telebook</title>
+
+    <link rel="stylesheet" data-th-href="@{'css/output.css'}"/>
+</head>
+<body>
+    <div th:replace="navbar::navbar"></div>
+    <div data-th-replace="${content}"></div>
+    <th:block data-th-replace="${script}"></th:block>
+    <footer class="p-4">This is footer</footer>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.0/flowbite.min.js"></script>-->
+
+    <script th:src="@{/js/flowbite.min.js}"></script>
+</body>
+</html>
