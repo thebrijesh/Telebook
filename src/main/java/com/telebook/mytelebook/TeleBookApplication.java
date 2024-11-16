@@ -28,4 +28,21 @@ public class TeleBookApplication {
 	public String service() {
 		return "service";
 	}
+
+	@GetMapping("/contact")
+	public String contact() {
+		return "contact";
+	}
+
+	@RequestMapping("/login")
+	public String login() {
+		return "login";
+	}
+
+	@RequestMapping("/register")
+	public String register() {
+		return "register";
+	}
+
+
 }
